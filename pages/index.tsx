@@ -27,10 +27,10 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="max-w-md p-2 mx-auto h-screen flex flex-col justify-center gap-4">
-        <h1 className="text-3xl font-bold mx-auto">Azar Metadata Viewer</h1>
+      <div className="flex flex-col justify-center h-screen max-w-md gap-4 p-2 mx-auto">
+        <h1 className="mx-auto text-3xl font-bold">Azar Metadata Viewer</h1>
         <input
-          className="border py-2 px-3 text-grey-darkest bg-gray-300"
+          className="px-3 py-2 bg-gray-300 border text-grey-darkest"
           type="number"
           placeholder="Enter token ID"
           onChange={(e) => setTokenId(Number(e.target.value))}
