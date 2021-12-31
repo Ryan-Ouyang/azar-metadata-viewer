@@ -54,7 +54,9 @@ const View: NextPage = () => {
         <div className="flex flex-row justify-between">
           <h1 className="text-3xl font-bold">Azar #{tokenId}</h1>
           <Link href="/">
-            <h1 className="text-3xl font-bold cursor-pointer">GO BACK</h1>
+            <h1 className="text-3xl font-bold underline rounded cursor-pointer">
+              BACK
+            </h1>
           </Link>
         </div>
         <div className="my-4 border border-black border-1"></div>
