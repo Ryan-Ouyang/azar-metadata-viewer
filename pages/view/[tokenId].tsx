@@ -4,12 +4,6 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { memo, useEffect, useState } from "react";
 
-const PrettyPrintJson = memo(({ data }: any) => (
-  <div>
-    <pre>{JSON.stringify(data, null, 2)}</pre>
-  </div>
-));
-
 const View: NextPage = () => {
   const router = useRouter();
   const { tokenId } = router.query;
@@ -55,7 +49,7 @@ const View: NextPage = () => {
 
       <div className="container mx-auto max-w-prose">
         <h1 className="text-3xl font-bold">Azar #{tokenId}</h1>
-        <div className="my-4 border border-1 border-black"></div>
+        <div className="my-4 border border-black border-1"></div>
         <img src={imageUrl} />
         <h3>Raw Metadata:</h3>
         <div>
@@ -65,5 +59,13 @@ const View: NextPage = () => {
     </div>
   );
 };
+
+function PrettyPrintJson({ data }: any) {
+  return (
+    <div>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
+}
 
 export default View;
